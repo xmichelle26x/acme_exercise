@@ -1,6 +1,5 @@
 import datetime
-from os import read
-import re
+from os import read 
 
 print("Hi, this is ACME company pay for hours program")
 
@@ -46,12 +45,19 @@ def employee_data(input):
         employee = e.split('=')
         employee_name = employee[0]
         employee_worked_days = employee[1].split(',')
-
+        pay = 0
+        for worked_day in employee_worked_days:
+            pay_days = worked_day[2::]
 
 
     print(employee_name) 
     print(employee_worked_days) 
 employee_data('data/data.txt')
+
+
+
+def split_time(time):
+    time = time.split("-")
 
 
 
