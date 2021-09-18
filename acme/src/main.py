@@ -1,3 +1,4 @@
+import sys
 from utils import *
 from data.constants import *
 
@@ -13,8 +14,7 @@ def employee_hours_pay(time, hours, pay_hours):
 
     for i in range(len(hours_arr)):
         if time[0]  >= hours_arr[i][0] and time[1] <= hours_arr[i][1]:
-            hours_normal_pay =  float(pay_dict[hours[i]])
-            break
+            hours_normal_pay = pay_dict[hours[i]]
     return (hours_normal_pay, total_hours)
 
         
@@ -33,11 +33,15 @@ def employee_final_pay(input, hours, pay_hours ):
                 pay += hours_price_normal[0]*hours_price_normal[1]
             else:
                 pay += (hours_price_normal[0] + 5)*hours_price_normal[1]
-        print("The amount to pay {0} is: {1} USD".format(employee_name, pay))
+        print(f'The amount to pay {employee_name} is: {pay} USD')
     
     
 if __name__ == '__main__':
-    print("-----------------------ACME---------------------")
-    print("Hi, this is ACME company pay for hours program")
-    print("------------------------------------------------\n")
-    (employee_final_pay(input_file, hours, pay_hours))
+    try:
+        print("-----------------------ACME---------------------")
+        print("Hi, this is ACME company pay for hours program")
+        print("------------------------------------------------\n")
+        (employee_final_pay(input_file, hours, pay_hours))
+
+    except Exception as error:
+        print('error', error)
