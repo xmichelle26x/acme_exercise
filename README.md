@@ -58,3 +58,8 @@ ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
 OUTPUT:
 
 The amount to pay ASTRID is: 85 USD
+
+
+#Solution 
+
+For the solution I stored the schedule and the amount to pay in dictionaries to have this infomation together, I split time to calculate the end time minus the initial time, this way the result is the hours worked. With this and the dictionary we can now have the worked hours times the price per worked hours. 
