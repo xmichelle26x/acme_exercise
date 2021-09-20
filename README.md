@@ -65,10 +65,18 @@ The amount to pay ASTRID is: 85 USD
 For the solution I used the single responsibility principle in the functions. I stored the schedule and the amount to pay in dictionaries to have this infomation together, I split time to calculate the end time minus the initial time, this way the result is the hours worked. With this and the dictionary we can now have the worked hours times the price per worked hours. 
 
 # Run 
+To run the program 
+```
+git clone
+
+cd Acme/acme/src
+
+python main.py
+```
 
 # Test
 
-To test the program run 
+To test the program
 ```
 python -m unittest test
 ```
