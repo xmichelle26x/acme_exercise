@@ -8,7 +8,7 @@ def read_file(path):
         for i in data:
             employees_list.append(i.strip())
         return employees_list    
-        
+
 
 def split_time(time):
     time = time.split('-') 
