@@ -78,5 +78,9 @@ python main.py
 
 To test the program
 ```
+git clone
+
+cd Acme/acme/src
+
 python -m unittest test
 ```
